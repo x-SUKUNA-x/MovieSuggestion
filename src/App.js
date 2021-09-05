@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./styles.css";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        
+        <div className="space">
+          <div className="space1"></div>
+          <div className="space2"></div>
+        </div>
+
+        <h1 id="heading"><span role="img" aria-label="movie camera emoji">
+          🎥
+        </span>  Movie And Series Recommendation App
+        </h1>
+      </div>
+
+      <div className="subHeadings">
+    
+      
+      </div>
     </div>
   );
 }
