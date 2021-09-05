@@ -251,12 +251,10 @@ var movieList = {
     {
       name: "Death Note",
       director: "Tetsuro Araki",
-      cast: "Úrsula Corberó, Pedro Alonso, Álvaro Morte",
-      rating: "9/10",
-      description:
-        "A high-school student discovers a supernatural notebook that grants its user the ability to kill.",
-      ima:
-        "https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_.jpg"
+      cast: "Brad Swaile, Ryô Naitô, Brian Drummond",
+      rating: "9.0/10",
+      description: "An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.",
+      image: "https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_.jpg"
     },
 
     {
