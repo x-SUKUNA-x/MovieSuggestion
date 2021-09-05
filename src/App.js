@@ -19,6 +19,16 @@ function App() {
           </h1>
         </div>
       </div>
+
+      <div className="container subHead-Conti">
+        <div className="subHeadings">
+          <p>Thriller</p>
+          <p>Action</p>
+          <p>Comedy</p>
+          <p>Science Fiction</p>
+          <p>Series</p>
+        </div>
+      </div>
     </div>
   );
 }

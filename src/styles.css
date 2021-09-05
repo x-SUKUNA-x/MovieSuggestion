@@ -15,13 +15,6 @@ body {
   /* font-family: 'Crimson Text', serif; */
 }
 
-.header {
-  background-color: var(--light-shades);
-  margin: 0;
-  border-bottom-left-radius: 4rem;
-  border-bottom-right-radius: 4rem;
-}
-
 .container {
   max-width: 80%;
   margin: 0rem auto;
@@ -31,6 +24,13 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.header {
+  background-color: var(--light-shades);
+  margin: 0;
+  border-bottom-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
 }
 
 .space {
@@ -66,8 +66,38 @@ body {
   margin: 0;
   padding: 2rem 0rem;
   text-align: center;
+  font-size: 2.5em;
   padding-bottom: 0.5rem;
-    margin-right: 15rem;  /*change this for smaller width    */
+  margin-right: 13rem; /*change this for smaller width */
   margin-top: -1rem;
   color: var(--dark-blue);
+}
+
+.subHead-Conti {
+  width: 700px;
+  justify-content: space-evenly;
+}
+
+.subHeadings {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--light-shades);
+}
+
+p {
+  font-family: "Crimson Text", serif;
+  margin: 1rem 1.5rem;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  letter-spacing: 0.125rem;
+  transition: 100ms ease-in-out;
+}
+
+p:hover,
+p:focus{
+  cursor: pointer;
+  transform: scale(0.9);
 }
