@@ -56,7 +56,7 @@ body {
   height: 0.15rem;
   background-color: var(--dark-blue);
   border: 0.125rem solid var(--dark-blue);
-  border-radius: 50%;
+  border-radius: 100%;
   margin-left: 0.125rem;
   margin-bottom: 0.5rem;
 }
@@ -79,6 +79,7 @@ span {
 .subHead-Conti {
   width: 700px;
   justify-content: space-evenly;
+  flex-direction: column;
 }
 
 .subHeadings {
@@ -96,20 +97,79 @@ p {
   line-height: 1.5;
   font-size: 1.1rem;
   letter-spacing: 0.125rem;
+  cursor: pointer;
   transition: 100ms ease-in-out;
 }
 
 p:hover,
-p:focus {
-  cursor: pointer;
+p:focus,
+p:active  {
   transform: scale(0.9);
   border-bottom: 2px solid var(--light-shades);
+}
+
+.outerDetails {
+  background-color: transparent;
+  width: 22rem;
+  height: 30rem;
+  perspective: 62rem;
+ 
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  color: var(--light-shades);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.outerDetails:hover .movies {
+  transform: rotateY(180deg);
+}
+
+.poster,
+.movieDetails {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.movieDetails {
+  background-color: var(--light-shades);
+  color: var(--dark-blue);
+  transform: rotateY(180deg);
+  border: 2px solid var(--dark-blue);
+   border-radius: 1rem;
+
+}
+
+.movieDetails p:hover,
+.movieDetails p:focus {
+  cursor: auto;
+  transform: none;
+  border-bottom: none;
+}
+
+img {
+  width: 22rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
 }
 
 footer {
   background-color: var(--light-shades);
   color: var(--dark-blue);
-  position: absolute; /*change this in min width  */
+  /*change this in min width  */
   bottom: 0;
   right: 0;
   left: 0;

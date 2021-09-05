@@ -286,17 +286,24 @@ var movieList = {
       cast: "Arunoday Singh",
       rating: "8.3/10",
       year: "2018",
-      description: "Rudra Srivastava, a senior inspector with Uttarakhand police is lured into kidnapping a young girl at her request. The plot begins as a simple plan to extort money in exchange for her release. When the chain of events go wrong and a series of lies unfold, he realizes that he is now a part of a deadly conspiracy.",
+      description: "Rudra Srivastava, a senior inspector with Uttarakhand police is lured into kidnapping a young girl at her request. The plot begins as a simple plan to extort money in exchange for her release.",
       image: "https://img.starbiz.com/resize/750x-/2020/09/23/apaharan-web-series-download-1-6592.jpg"
     }
   ]
+
 };
+
+var genreList = Object.keys(movieList);
 
 
 
 function App() {
+  const [genre, genreData] = useState("Thriller");
 
+  function listGenreHandler(genre) {
+    genreData(genre);
 
+  }
 
 
   return (
@@ -319,11 +326,34 @@ function App() {
 
       <div className="container subHead-Conti">
         <div className="subHeadings">
-          <p>Thriller</p>
-          <p>Action</p>
-          <p>Comedy</p>
-          <p>Science Fiction</p>
-          <p>Series</p>
+          {
+            genreList.map((genre, index) => {
+              return <p key={index} onClick={() => listGenreHandler(genre)}>{genre}</p>
+            })
+
+          }
+        </div>
+
+        <div className="outerDetails">
+        {
+          movieList[genre].map((genre, index) => {
+            return (
+              <div key={index} className="movies">
+                <div className="poster">
+                  <img src={genre.image} alt="poster"/>
+                </div>
+                <div className="movieDetails">
+                  <p>{genre.name}</p>
+                  <p>Director - {genre.director}</p>
+                  <p>Cast - {genre.cast}</p>
+                  <p>IMDB - {genre.rating}</p>
+                  <p>Year - {genre.year}</p>
+                  <p>Description - {genre.description}</p>
+                </div>
+              </div>
+            );
+          })
+        }
         </div>
       </div>
 
@@ -364,8 +394,8 @@ function App() {
             </a>
           </div>
         </div>
-
       </footer>
+
     </div>
   );
 }
