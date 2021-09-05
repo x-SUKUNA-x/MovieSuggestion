@@ -62,6 +62,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+span {
+  filter: contrast(200%);
+}
+
 #heading {
   margin: 0;
   padding: 2rem 0rem;
@@ -120,7 +124,6 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  
 }
 
 .copyright {
@@ -135,9 +138,10 @@ footer {
 #cp:focus {
   cursor: auto;
   transform: none;
+  border-bottom: none;
 }
 
-.socialMedia{
+.socialMedia {
   text-align: center;
   justify-content: center;
   align-items: center;

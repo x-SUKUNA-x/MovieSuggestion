@@ -1,7 +1,32 @@
 import { useState } from "react";
 import "./styles.css";
 
+var movieList = {
 
+  Thriller: [
+    {
+      name: "Badla",
+      director: "Sujoy Ghosh",
+      cast: "Amitabh Bachchan, Taapsee Panu",
+      rating: "7.8/10",
+      year: "2019",
+      description: "A dynamic young entrepreneur finds herself locked in a hotel room with the corpse of her dead lover. She hires a prestigious lawyer to defend her and they work together to figure out what actually happened.",
+      image: ""
+
+
+    }, {}, {}, {}
+  ],
+
+  Action: [],
+
+  Comedy: [],
+
+  Science_Fiction: [],
+
+  Series: []
+
+
+};
 
 function App() {
   return (
