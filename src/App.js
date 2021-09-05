@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./styles.css";
 
+
+// all movies list
 var movieList = {
 
   Thriller: [
@@ -11,7 +13,7 @@ var movieList = {
       rating: "7.8/10",
       year: "2019",
       description: "A dynamic young entrepreneur finds herself locked in a hotel room with the corpse of her dead lover. She hires a prestigious lawyer to defend her and they work together to figure out what actually happened.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BYjZiMzIzYTctNDViZi00OWNmLWFmN2YtMmI2OWJiZWViMmY3XkEyXkFqcGdeQXVyNTYwMzA0MTM@._V1_.jpg"
 
     },
 
@@ -22,7 +24,7 @@ var movieList = {
       rating: "7.7/10",
       year: "2015",
       description: "While investigating the disappearance of a chemist, a detective uncovers a larger conspiracy to unsettle Calcutta.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BYTU1N2VmODMtMjQxZi00ZGRmLWIyZTEtMjg3YmNkZDNjNTc1XkEyXkFqcGdeQXVyNjc5Mjg4Nzc@._V1_.jpg"
     },
 
 
@@ -33,7 +35,7 @@ var movieList = {
       rating: "8.4/10",
       year: "2019",
       description: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
-      image: ""
+      image: "https://cdn.shopify.com/s/files/1/0057/3728/3618/products/924607fa629851bc686d925ab8a63e70_480x.progressive.jpg?v=1573572635"
     },
 
     {
@@ -43,7 +45,7 @@ var movieList = {
       rating: "7.4/10",
       year: "2014",
       description: "An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took everything from him.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/81F5PF9oHhL._AC_SL1500_.jpg"
     },
 
     {
@@ -51,9 +53,9 @@ var movieList = {
       director: "Martin Campbell",
       cast: "Daniel Craig",
       rating: "8.0/10",
-      year: "",
-      description: "",
-      image: ""
+      year: "2006",
+      description: "After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.",
+      image: "https://m.media-amazon.com/images/I/617AgXANWGL._AC_SL1024_.jpg"
     }
   ],
 
@@ -63,9 +65,9 @@ var movieList = {
       director: "Peyton Reed",
       cast: "Paul Rudd",
       rating: "7.3/10",
-      year: "",
+      year: "2015",
       description: "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, pull off a plan that will save the world.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/51jqtx8KltL._AC_.jpg"
     },
 
 
@@ -76,7 +78,7 @@ var movieList = {
       rating: "6.6/10",
       year: "2017",
       description: "When a mysterious woman seduces Dominic Toretto into the world of terrorism and a betrayal of those closest to him, the crew face trials that will test them as never before.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/51kJBbwESmL._AC_.jpg"
     },
 
     {
@@ -86,7 +88,7 @@ var movieList = {
       rating: "6.1/10",
       year: "2019",
       description: "Six individuals from all around the globe, each the very best at what they do, have been chosen not only for their skill, but for a unique desire to delete their pasts to change the future.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/61Sqs2aF8fL._AC_SY879_.jpg"
     },
 
     {
@@ -96,7 +98,7 @@ var movieList = {
       rating: "6.7/10",
       year: "2020",
       description: "Tyler Rake, a fearless black market mercenary, embarks on the most deadly extraction of his career when he's enlisted to rescue the kidnapped son of an imprisoned international crime lord.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/71lpcnTVFXL._SL1500_.jpg"
     },
 
     {
@@ -106,7 +108,7 @@ var movieList = {
       rating: "6.5/10",
       year: "2017",
       description: "Captain Jack Sparrow is pursued by old rival Captain Salazar and a crew of deadly ghosts who have escaped from the Devil's Triangle. They're determined to kill every pirate at sea...notably Jack.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/61OYUw-EJLL._AC_.jpg"
     },
 
     {
@@ -116,7 +118,7 @@ var movieList = {
       rating: "7.9/10",
       year: "2008",
       description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/51WoeTa7ZHL._AC_.jpg"
     },
   ],
 
@@ -128,7 +130,7 @@ var movieList = {
       rating: "8.2/10",
       year: "2000",
       description: "Three unemployed men look for answers to all their money problems - but when their opportunity arrives, will they know what to do with it?",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BNDU3NDU5YmUtOWUwZC00NDczLTg4NGEtNGJiNDU5ZDgxZDY1XkEyXkFqcGdeQXVyODMyODMxNDY@._V1_.jpg"
     },
 
     {
@@ -138,17 +140,17 @@ var movieList = {
       rating: "8.4/10",
       year: "2009",
       description: "Two friends are searching for their long lost companion. They revisit their college days and recall the memories of their friend who inspired them to think differently, even as the rest of the world called them 'idiots'.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BNTkyOGVjMGEtNmQzZi00NzFlLTlhOWQtODYyMDc2ZGJmYzFhXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX1000_.jpg"
     },
 
     {
       name: "Dhol",
-      director: "",
+      director: "Priyadarshan, Aman Ullah",
       cast: "Sharman Joshi, Kunal Khemu, Tusshar Kapoor, Rajpal Yadav",
       rating: "6.4/10",
       year: "2007",
       description: "Four lazy friends try to woo a rich girl, in order to live a wealthy lifestyle. Their plan, however goes horribly wrong after they get embroiled with a notorious criminal.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BOTRiZDE0MjMtMDA0MS00MzU4LWFhMDctYTYwMmU2ZDFmMjViXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_.jpg"
     },
 
     {
@@ -158,7 +160,7 @@ var movieList = {
       rating: "8.0/10",
       year: "2016",
       description: "A wisecracking mercenary gets experimented on and becomes immortal but ugly, and sets out to track down the man who ruined his looks.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/51qRj51ht8L._AC_.jpg"
     },
 
     {
@@ -168,7 +170,7 @@ var movieList = {
       rating: "7.0/10",
       year: "1999",
       description: "Four teenage boys enter a pact to lose their virginity by prom night.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/61HqHOUj08L._AC_SL1500_.jpg"
     },
   ],
 
@@ -180,7 +182,7 @@ var movieList = {
       rating: "8.6/10",
       year: "2014",
       description: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/91obuWzA3XL._AC_SL1500_.jpg"
     },
 
 
@@ -191,17 +193,17 @@ var movieList = {
       rating: "8.8/10",
       year: "2010",
       description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/5103Iag9c9L._AC_.jpg"
     },
 
     {
       name: "The Martian",
-      director: "",
+      director: "Ridley Scott",
       cast: "Matt Damon, Jessica Chastain",
       rating: "8.0/10",
       year: "2015",
       description: "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/A1rjuidemEL._AC_SL1500_.jpg"
     },
 
 
@@ -212,7 +214,7 @@ var movieList = {
       rating: "7.5/10",
       year: "2011",
       description: "A substance designed to help the brain repair itself gives advanced intelligence to a chimpanzee who leads an ape uprising.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/81yWc81CqmL._AC_SL1500_.jpg"
     },
 
     {
@@ -222,19 +224,19 @@ var movieList = {
       rating: "7.7/10",
       year: "2013",
       description: "Two astronauts work together to survive after an accident leaves them stranded in space.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/81DNIBr-eSL._AC_SL1500_.jpg"
     }
   ],
 
   Series: [
     {
-      name: "Flash",
+      name: "The Flash",
       director: "Greg Berlanti, Geoff Johns, Andrew Kreisberg",
       cast: "Grant Gustin, Candice Patton, Tom Cavanagh",
       rating: "7.6/10",
       year: "2014",
       description: "After being struck by lightning, Barry Allen wakes up from his coma to discover he's been given the power of super speed, becoming the next Flash, fighting crime in Central City.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/51SaO9oxn5L._AC_.jpg"
     },
 
 
@@ -245,7 +247,7 @@ var movieList = {
       rating: "8.3/10",
       year: "2017",
       description: "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
-      image: ""
+      image: "https://m.media-amazon.com/images/I/61boFr6SYZL._SL1000_.jpg"
     },
 
     {
@@ -253,6 +255,7 @@ var movieList = {
       director: "Tetsuro Araki",
       cast: "Brad Swaile, Ryô Naitô, Brian Drummond",
       rating: "9.0/10",
+      year: "2006",
       description: "An intelligent high school student goes on a secret crusade to eliminate criminals from the world after discovering a notebook capable of killing anyone whose name is written into it.",
       image: "https://m.media-amazon.com/images/M/MV5BODkzMjhjYTQtYmQyOS00NmZlLTg3Y2UtYjkzN2JkNmRjY2FhXkEyXkFqcGdeQXVyNTM4MDQ5MDc@._V1_.jpg"
     },
@@ -264,7 +267,7 @@ var movieList = {
       rating: "8.8/10",
       year: "2019",
       description: "A working man from the National Investigation Agency tries to protect the nation from terrorism, but he also needs to keep his family safe from his secret job.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BMzRjZWVmMzItNTdmYS00OWEzLTgyOGUtNThiNTU2ZThlYjY0XkEyXkFqcGdeQXVyMTIxMDk2NDE4._V1_.jpg"
     },
 
     {
@@ -274,7 +277,7 @@ var movieList = {
       rating: "8.4/10",
       year: "2018",
       description: "A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur.",
-      image: ""
+      image: "https://m.media-amazon.com/images/M/MV5BMjEzNzMwNjAzMl5BMl5BanBnXkFtZTgwMTI4MzY3NjM@._V1_.jpg"
     },
 
     {
@@ -284,15 +287,20 @@ var movieList = {
       rating: "8.3/10",
       year: "2018",
       description: "Rudra Srivastava, a senior inspector with Uttarakhand police is lured into kidnapping a young girl at her request. The plot begins as a simple plan to extort money in exchange for her release. When the chain of events go wrong and a series of lies unfold, he realizes that he is now a part of a deadly conspiracy.",
-      image: ""
+      image: "https://img.starbiz.com/resize/750x-/2020/09/23/apaharan-web-series-download-1-6592.jpg"
     }
   ]
-
-
 };
 
+
+
 function App() {
+
+
+
+
   return (
+    // body
     <div className="App">
       <div className="header">
         <div className="container">
@@ -303,10 +311,11 @@ function App() {
 
           <h1 id="heading"><span role="img" aria-label="movie camera emoji">
             🎥
-          </span>  Movie And Series Recommendation App
+          </span> Movies And Series Recommendation App
           </h1>
         </div>
       </div>
+
 
       <div className="container subHead-Conti">
         <div className="subHeadings">
@@ -318,14 +327,16 @@ function App() {
         </div>
       </div>
 
+
       <div className="conatiner mainConti">
       </div>
+
 
       <footer>
         <div className="container footerConti">
           <div className="copyright">
             <h2 className="copyrightText">
-              Movie And Series Recommendation App
+              Movies And Series Recommendation App
             </h2>
             <p id="cp" className="copyrightText">Copyright &copy; 2021</p>
           </div>

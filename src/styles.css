@@ -67,12 +67,12 @@ span {
 }
 
 #heading {
-  margin: 0;
+ margin: 0 auto;
   padding: 2rem 0rem;
   text-align: center;
   font-size: 2.5em;
   padding-bottom: 0.5rem;
-  margin-right: 13rem; /*change this for smaller width */
+  /* margin-right: 13rem; change this for smaller width */
   margin-top: -1rem;
   color: var(--dark-blue);
 }
