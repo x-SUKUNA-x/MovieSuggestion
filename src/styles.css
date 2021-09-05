@@ -97,7 +97,57 @@ p {
 }
 
 p:hover,
-p:focus{
+p:focus {
   cursor: pointer;
   transform: scale(0.9);
+}
+
+footer {
+  background-color: var(--light-shades);
+  color: var(--dark-blue);
+  position: absolute; /*change this in min width  */
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.footerConti {
+  width: 700px;
+  justify-content: space-between;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.copyright {
+  margin: 1rem 0rem;
+}
+
+.copyrightText {
+  margin: 0rem 0rem;
+}
+
+#cp:hover,
+#cp:focus {
+  cursor: auto;
+  transform: none;
+}
+
+.socialMedia{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  margin: 0rem 0.5rem;
+}
+
+i {
+  color: var(--dark-blue);
 }

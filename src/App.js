@@ -29,6 +29,44 @@ function App() {
           <p>Series</p>
         </div>
       </div>
+
+      <div className="conatiner mainConti">
+      </div>
+
+      <footer>
+        <div className="container footerConti">
+          <div className="copyright">
+            <h2 className="copyrightText">
+              Movie And Series Recommendation App
+            </h2>
+            <p id="cp" className="copyrightText">Copyright &copy; 2021</p>
+          </div>
+
+          <div className="socialMedia">
+            <a
+              href="https://github.com/singhsduos/Movies-Or-Series-Reccomendation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-github fa-2x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/neelesh-singh-b58a6b152/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://twitter.com/singhs_duos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter fa-2x"></i>
+            </a>
+          </div>
+        </div>
+
+      </footer>
     </div>
   );
 }
