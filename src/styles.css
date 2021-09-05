@@ -100,6 +100,7 @@ p:hover,
 p:focus {
   cursor: pointer;
   transform: scale(0.9);
+  border-bottom: 2px solid var(--light-shades);
 }
 
 footer {
