@@ -20,9 +20,16 @@ body {
   margin: 0;
   border-bottom-left-radius: 4rem;
   border-bottom-right-radius: 4rem;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0rem auto;
+  right: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -38,11 +45,10 @@ body {
   width: 2rem;
   height: 3px;
   background-color: var(--dark-blue);
-  border: 2px solid var(--dark-blue); 
+  border: 2px solid var(--dark-blue);
   border-radius: 2rem;
   margin-right: 0.125rem;
   margin-bottom: 0.5rem;
-  /* display: inline-block; */
 }
 
 .space2 {
@@ -54,8 +60,6 @@ body {
   border-radius: 50%;
   margin-left: 0.125rem;
   margin-bottom: 0.5rem;
-
-  /* display: inline-block; */
 }
 
 #heading {
@@ -63,7 +67,7 @@ body {
   padding: 2rem 0rem;
   text-align: center;
   padding-bottom: 0.5rem;
-  margin-right: 14rem;
+    margin-right: 15rem;  /*change this for smaller width    */
   margin-top: -1rem;
   color: var(--dark-blue);
 }
