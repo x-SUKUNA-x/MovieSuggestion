@@ -82,7 +82,7 @@ var movieList = {
       rating: "7.3/10",
       year: "2015",
       description: "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, and save the world.",
-      image: "https://m.media-amazon.com/images/I/51jqtx8KltL._AC_.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BMjM2NTQ5Mzc2M15BMl5BanBnXkFtZTgwNTcxMDI2NTE@._V1_FMjpg_UX1000_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=pWdKf3MneyI",
     },
 
@@ -127,7 +127,7 @@ var movieList = {
       rating: "6.5/10",
       year: "2017",
       description: "Captain Jack fight with Captain Salazar and a crew of deadly ghosts who have escaped from the Devil's Triangle.",
-      image: "https://m.media-amazon.com/images/I/61OYUw-EJLL._AC_.jpg",
+      image: "https://images-na.ssl-images-amazon.com/images/I/A1oOBuoEdIL._RI_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=Hgeu5rhoxxY",
     },
 
@@ -138,7 +138,7 @@ var movieList = {
       rating: "7.9/10",
       year: "2008",
       description: "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
-      image: "https://m.media-amazon.com/images/I/51WoeTa7ZHL._AC_.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_FMjpg_UX1000_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=8ugaeA-nMTc",
     },
   ],
