@@ -220,7 +220,7 @@ var movieList = {
       rating: "8.8/10",
       year: "2010",
       description: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-      image: "https://m.media-amazon.com/images/I/5103Iag9c9L._AC_.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BMjExMjkwNTQ0Nl5BMl5BanBnXkFtZTcwNTY0OTk1Mw@@._V1_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=YoHD9XEInc0",
     },
 
