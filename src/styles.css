@@ -189,6 +189,27 @@ img {
   font-weight: 600;
 }
 
+#btn {
+  text-transform: capitalize;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 0.7rem;
+  border-radius: 5px;
+  margin: 1rem;
+  text-decoration: none;
+  border: none;
+  color: var(--light-shades);
+  background-color: var(--dark-blue);
+  transition: 300ms ease-in-out;
+}
+
+#btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
 footer {
   background-color: var(--light-shades);
   color: var(--dark-blue);
