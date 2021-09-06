@@ -28,6 +28,16 @@ var movieList = {
       youtubeLink: "https://www.youtube.com/watch?v=ZG--GOpi_0g",
     },
 
+    {
+      name: "NH-10",
+      director: "Navdeep Singh",
+      cast: "Anushka Sharma, Darshan Kumaar",
+      rating: "7.2/10",
+      year: "2015",
+      description: "On their way to a weekend retreat, a married couple find their dream vacation turn into a nightmare when they cross paths with a dangerous gang.",
+      image: "https://m.media-amazon.com/images/M/MV5BOTUyMzk3MzQ5OV5BMl5BanBnXkFtZTgwNDM3MjM5NDE@._V1_FMjpg_UX1000_.jpg",
+      youtubeLink: "https://www.youtube.com/watch?v=A9icNqWlylw",
+    },
 
     {
       name: "Joker",
