@@ -388,7 +388,7 @@ function App() {
                     <p>IMDB - {movies.rating}</p>
                     <p>Year - {movies.year}</p>
                     <p>{movies.description}</p>
-                    <a id="btn" href={movies.youtubeLink} target="_blank">Watch Trailer!</a>
+                    <a id="btn" href={movies.youtubeLink} target="_blank" rel="noopener noreferrer">Watch Trailer!</a>
                   </div>
                 </div>
               </div>
