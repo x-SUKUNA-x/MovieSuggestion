@@ -19,7 +19,8 @@ A Emoji-Pedia app built using ReactJS that can tell the meanings of emojis liste
 
 
 ![Movie-Recommendation-App-1](https://user-images.githubusercontent.com/32032008/132235466-88ef2067-fae1-4c07-ba4c-a703de3ca2af.png)
-![Movie-Recommendation-App-2](https://user-images.githubusercontent.com/32032008/132235499-1f3eb3de-efc1-4b57-9ee1-669e551a5694.png)
+![Movie-Recommendation-App-2](https://user-images.githubusercontent.com/32032008/132237960-001b9d79-c91c-4dd9-a60e-4a38ca6e3c8e.png)
+
 
 
 ## Demo-video
