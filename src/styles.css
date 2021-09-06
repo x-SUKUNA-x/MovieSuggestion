@@ -260,3 +260,64 @@ a {
 i {
   color: var(--dark-blue);
 }
+
+@media screen and (max-width: 560px) {
+}
+
+@media screen and (max-width: 460px) {
+
+
+.header {
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+  #heading {
+    margin: 1rem 0rem;
+    padding: 3rem 0rem;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-bottom: 0rem;
+    margin-top: -2rem;
+  }
+
+  .space {
+    display: none;
+    flex-direction: none;
+    justify-content: none;
+    align-items: none;
+    margin-top: none;
+  }
+
+  .space1 {
+    width: none;
+    height: none;
+    background-color: none;
+    border: none;
+    border-radius: none;
+    margin-right: none;
+    margin-bottom: none;
+  }
+
+  .space2 {
+    width: none;
+    height: none;
+    background-color: none;
+    border: none;
+    border-radius: none;
+    margin-left: none;
+    margin-bottom: none;
+  }
+
+  .movieList-conti {
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
+    align-items: center;
+  }
+
+  .footerConti {
+    flex-direction: column;
+  }
+}
