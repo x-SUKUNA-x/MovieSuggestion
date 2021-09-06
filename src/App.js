@@ -72,13 +72,13 @@ var movieList = {
 
 
     {
-      name: "The Fate of the Furious",
-      director: "F.Gary Gray",
-      cast: "Dwayne Johnson, Vin Diesel",
-      rating: "6.6/10",
-      year: "2017",
-      description: "When a mysterious woman seduces Dominic Toretto into the world of terrorism and a betrayal of those closest to him, the crew face trials that will test them as never before.",
-      image: "https://m.media-amazon.com/images/I/51kJBbwESmL._AC_.jpg"
+      name: "Hobbs & Shaw",
+      director: "David Leitch",
+      cast: "Dwayne Johnson, Jason Statham, Idris Elba",
+      rating: "6.4/10",
+      year: "2019",
+      description: "Lawman Luke Hobbs (Dwayne 'The Rock' Johnson) and outcast Deckard Shaw (Jason Statham) form an unlikely alliance when a cyber-genetically enhanced villain threatens the future of humanity.",
+      image: "https://m.media-amazon.com/images/M/MV5BOTIzYmUyMmEtMWQzNC00YzExLTk3MzYtZTUzYjMyMmRiYzIwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg"
     },
 
     {
@@ -333,28 +333,31 @@ function App() {
 
           }
         </div>
+      </div>
 
-        <div className="outerDetails">
+      <div className="conatiner movieList-conti">
         {
-          movieList[genre].map((genre, index) => {
+          movieList[genre].map((movies, index) => {
             return (
-              <div key={index} className="movies">
-                <div className="poster">
-                  <img src={genre.image} alt="poster"/>
-                </div>
-                <div className="movieDetails">
-                  <p>{genre.name}</p>
-                  <p>Director - {genre.director}</p>
-                  <p>Cast - {genre.cast}</p>
-                  <p>IMDB - {genre.rating}</p>
-                  <p>Year - {genre.year}</p>
-                  <p>Description - {genre.description}</p>
+              <div className="movies-card">
+                <div key={index} className="moviesCard-Content">
+                  <div className="poster">
+                    <img src={movies.image} alt="poster" />
+                  </div>
+                  <div key={index} className="movieDetails">
+                    <p id="movie-title">{movies.name}</p>
+                    <p>Director - {movies.director}</p>
+                    <p>Cast - {movies.cast}</p>
+                    <p>IMDB - {movies.rating}</p>
+                    <p>Year - {movies.year}</p>
+                    <p>{movies.description}</p>
+                  </div>
                 </div>
               </div>
             );
           })
         }
-        </div>
+
       </div>
 
 

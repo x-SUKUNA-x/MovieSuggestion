@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
 :root {
   --dark-blue: #023047;
   --light-shades: #edf6f9;
@@ -103,20 +103,37 @@ p {
 
 p:hover,
 p:focus,
-p:active  {
+p:active {
   transform: scale(0.9);
   border-bottom: 2px solid var(--light-shades);
 }
 
-.outerDetails {
+.movieList-conti {
+  width: 700px;
+  display: grid;
+  margin: 0rem auto;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+
+.movies-card {
   background-color: transparent;
   width: 22rem;
   height: 30rem;
   perspective: 62rem;
- 
+  margin: 1rem auto;
 }
 
-.movies {
+img {
+  width: 22rem;
+  height: 30rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.moviesCard-Content {
   display: flex;
   flex-direction: row;
   color: var(--light-shades);
@@ -126,11 +143,12 @@ p:active  {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
+  cursor: pointer;
+  transition: transform 1.2s ease-in-out;
   transform-style: preserve-3d;
 }
 
-.outerDetails:hover .movies {
+.movies-card:hover .moviesCard-Content {
   transform: rotateY(180deg);
 }
 
@@ -147,9 +165,7 @@ p:active  {
   background-color: var(--light-shades);
   color: var(--dark-blue);
   transform: rotateY(180deg);
-  border: 2px solid var(--dark-blue);
-   border-radius: 1rem;
-
+  border-radius: 1rem;
 }
 
 .movieDetails p:hover,
@@ -159,16 +175,24 @@ p:active  {
   border-bottom: none;
 }
 
-img {
-  width: 22rem;
-  height: 30rem;
-  border-radius: 1rem;
-  margin-bottom: 3rem;
+#movie-title {
+  text-transform: uppercase;
+  font-family: "Lobster Two", cursive;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.movieDetails p:nth-child(2),
+.movieDetails p:nth-child(3),
+.movieDetails p:nth-child(4),
+.movieDetails p:nth-child(5) {
+  font-weight: 600;
 }
 
 footer {
   background-color: var(--light-shades);
   color: var(--dark-blue);
+
   /*change this in min width  */
   bottom: 0;
   right: 0;
