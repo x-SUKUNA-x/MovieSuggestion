@@ -65,6 +65,17 @@ var movieList = {
 
   Action: [
     {
+      name: "Baahubali 2",
+      director: "S.S.Rajamouli",
+      cast: "Prabhas, Rana Daggubati",
+      rating: "8.2/10",
+      year: "2017",
+      description: "When Shiva, the son of Bahubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
+      image: "https://m.media-amazon.com/images/M/MV5BODY0NTQ0MzctNmNlMi00MWUxLThmNTEtMGFhNjczYmVjYjcxXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg",
+      youtubeLink: "https://www.youtube.com/watch?v=G62HrubdD6o",
+    },
+
+    {
       name: "Ant-Man",
       director: "Peyton Reed",
       cast: "Paul Rudd",
