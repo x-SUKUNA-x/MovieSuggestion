@@ -1,3 +1,35 @@
+ Emoji-Pedia
+A Emoji-Pedia app built using ReactJS that can tell the meanings of emojis listed and can also take emojis as user input to show their meanings.
+
+### <a href="https://movie-reccomendation-app.netlify.app/" target="_blank">**Visit Now 🚀**</a>
+
+
+## Things I learend
+1. Working with ReactJS
+2. JSX
+3. CSS-3 Flip Card Animation
+
+
+## Tech Stack
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://www.w3schools.com/html/)
+[![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3schools.com/css/)
+[![jAVASCRIPT](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![REACTJS](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white)](https://reactjs.org/)
+[![web](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=Netlify&logoColor=white)](https://movie-reccomendation-app.netlify.app/)
+
+
+![Movie-Recommendation-App-1](https://user-images.githubusercontent.com/32032008/132235466-88ef2067-fae1-4c07-ba4c-a703de3ca2af.png)
+![Movie-Recommendation-App-2](https://user-images.githubusercontent.com/32032008/132235499-1f3eb3de-efc1-4b57-9ee1-669e551a5694.png)
+
+
+## Demo-video
+
+
+https://user-images.githubusercontent.com/32032008/132237610-060c208b-cc04-4d90-8620-bdfc76d57578.mp4
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
