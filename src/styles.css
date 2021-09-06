@@ -341,7 +341,6 @@ i {
     justify-content: space-around;
     align-items: center;
   }
-
 }
 
 /* media-query-560px */
@@ -433,7 +432,6 @@ i {
     margin-bottom: 0.6rem;
     font-size: 0.9rem;
   }
-
 }
 
 /* media-query-361px */
@@ -462,5 +460,5 @@ i {
     width: 18rem;
     height: 29rem;
   }
-
 }
+
