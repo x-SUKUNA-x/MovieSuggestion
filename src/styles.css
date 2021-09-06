@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap");
+
+/*
+ ______________________________________________
+|                                              |
+|        DEFAULT BODY AND ROOT TAG CSS         |
+|______________________________________________|
+
+*/
+
 :root {
   --dark-blue: #023047;
   --light-shades: #edf6f9;
@@ -11,9 +20,15 @@ body {
   font-family: "Lobster Two", cursive;
   box-sizing: border-box;
   background: var(--dark-blue);
-  /* line-height: 1.5; */
-  /* font-family: 'Crimson Text', serif; */
 }
+
+/*
+ ______________________________________________
+|                                              |
+|              UTILITIES CLASS                 |
+|______________________________________________|
+
+*/
 
 .container {
   max-width: 80%;
@@ -25,6 +40,14 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+/*
+ ______________________________________________
+|                                              |
+|             HEADER CLASS                     |
+|______________________________________________|
+
+*/
 
 .header {
   background-color: var(--light-shades);
@@ -71,10 +94,17 @@ span {
   text-align: center;
   font-size: 2.5em;
   padding-bottom: 0.5rem;
-  /* margin-right: 13rem; change this for smaller width */
   margin-top: -1rem;
   color: var(--dark-blue);
 }
+
+/*
+ ______________________________________________
+|                                              |
+|             SUB-HEADING CLASS                |
+|______________________________________________|
+
+*/
 
 .subHead-Conti {
   width: 700px;
@@ -107,6 +137,14 @@ p:active {
   transform: scale(0.9);
   border-bottom: 2px solid var(--light-shades);
 }
+
+/*
+ ______________________________________________
+|                                              |
+|           MOVIE-LIST CLASS                   |
+|______________________________________________|
+
+*/
 
 .movieList-conti {
   width: 700px;
@@ -210,11 +248,17 @@ img {
   transform: scale(0.9);
 }
 
+/*
+ ______________________________________________
+|                                              |
+|             FOOTER SECTION CSS               |
+|______________________________________________|
+
+*/
+
 footer {
   background-color: var(--light-shades);
   color: var(--dark-blue);
-
-  /*change this in min width  */
   bottom: 0;
   right: 0;
   left: 0;
@@ -235,7 +279,7 @@ footer {
 }
 
 .copyrightText {
-  margin: 0rem 0rem;
+  margin: 0.3rem;
 }
 
 #cp:hover,
@@ -261,16 +305,57 @@ i {
   color: var(--dark-blue);
 }
 
-@media screen and (max-width: 560px) {
+/*
+ ______________________________________________
+|                                              |
+|            MEDIA QUERIES CSS                 |
+|______________________________________________|
+
+*/
+
+/* media-query-760px */
+
+@media screen and (max-width: 760px) {
+  .container {
+    max-width: fit-content;
+    justify-content: center;
+  }
+
+  #heading {
+    margin: 0rem 1rem;
+    font-size: 1.5rem;
+    margin-top: -1rem;
+  }
+
+  .subHeadings {
+    justify-content: center;
+  }
+
+  .movieList-conti {
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footerConti {
+    justify-content: space-around;
+    align-items: center;
+  }
+
 }
 
-@media screen and (max-width: 460px) {
+/* media-query-560px */
 
+@media screen and (max-width: 560px) {
+  .container {
+    max-width: 100%;
+    justify-content: center;
+  }
 
-.header {
+  .header {
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
-}
+  }
 
   #heading {
     margin: 1rem 0rem;
@@ -279,6 +364,17 @@ i {
     font-size: 1.1rem;
     padding-bottom: 0rem;
     margin-top: -2rem;
+  }
+
+  .subHeadings {
+    justify-content: center;
+    align-items: center;
+    color: var(--light-shades);
+    margin: 0rem;
+  }
+
+  .subHeadings p {
+    margin: 0.5rem;
   }
 
   .space {
@@ -309,6 +405,10 @@ i {
     margin-bottom: none;
   }
 
+  .movies-card {
+    margin: 1rem;
+  }
+
   .movieList-conti {
     max-width: 70%;
     display: grid;
@@ -320,4 +420,47 @@ i {
   .footerConti {
     flex-direction: column;
   }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  #cp {
+    font-size: 0.9rem;
+  }
+
+  .socialMedia {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+/* media-query-361px */
+
+@media screen and (max-width: 361px) {
+  .container {
+    max-width: 80%;
+    justify-content: center;
+  }
+
+  #movie-title {
+    font-size: 1.1rem;
+  }
+
+  .movieDetails p:nth-child(2),
+  .movieDetails p:nth-child(3),
+  .movieDetails p:nth-child(4),
+  .movieDetails p:nth-child(5) {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: auto;
+  }
+
+  .movies-card,
+  img {
+    width: 18rem;
+    height: 29rem;
+  }
+
 }

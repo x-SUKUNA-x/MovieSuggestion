@@ -340,21 +340,20 @@ var movieList = {
 
 };
 
-var genreList = Object.keys(movieList);
 
 
 
 function App() {
+  // usestate
   const [genre, genreData] = useState("Thriller");
 
+  // onclick event
+  var genreList = Object.keys(movieList);
   function listGenreHandler(genre) {
     genreData(genre);
-
   }
 
-
   return (
-    // body
     <div className="App">
       <div className="header">
         <div className="container">
