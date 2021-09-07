@@ -278,7 +278,7 @@ var movieList = {
       rating: "7.6/10",
       year: "2014",
       description: "After being struck by lightning, Barry Allen become the next Flash with super speed power, fighting crime in Central City.",
-      image: "https://m.media-amazon.com/images/I/51SaO9oxn5L._AC_.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BMDIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=Yj0l7iGKh8g",
     },
 
