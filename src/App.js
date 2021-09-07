@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ParticleBackground from "./ParticleBackground";
 import "./styles.css";
 
 
@@ -353,99 +354,103 @@ function App() {
     genreData(genre);
   }
 
+
   return (
+
     <div className="App">
-      <div className="header">
-        <div className="container">
-          <div className="space">
-            <div className="space1"></div>
-            <div className="space2"></div>
+      <ParticleBackground />
+      <div className="movieBody">
+        <div className="header">
+          <div className="container">
+            <div className="space">
+              <div className="space1"></div>
+              <div className="space2"></div>
+            </div>
+
+            <h1 id="heading"><span role="img" aria-label="movie camera emoji">
+              🎥
+            </span> Movies And Series Recommendation App
+            </h1>
           </div>
-
-          <h1 id="heading"><span role="img" aria-label="movie camera emoji">
-            🎥
-          </span> Movies And Series Recommendation App
-          </h1>
         </div>
-      </div>
 
 
-      <div className="container subHead-Conti">
-        <div className="subHeadings">
+        <div className="container subHead-Conti">
+          <div className="subHeadings">
+            {
+              genreList.map((genre, index) => {
+                return <p key={index} onClick={() => listGenreHandler(genre)}>{genre}</p>
+              })
+
+            }
+          </div>
+        </div>
+
+        <div className="conatiner movieList-conti">
           {
-            genreList.map((genre, index) => {
-              return <p key={index} onClick={() => listGenreHandler(genre)}>{genre}</p>
-            })
-
-          }
-        </div>
-      </div>
-
-      <div className="conatiner movieList-conti">
-        {
-          movieList[genre].map((movies, index) => {
-            return (
-              <div className="movies-card">
-                <div key={index} className="moviesCard-Content">
-                  <div className="poster">
-                    <img src={movies.image} alt="poster" />
-                  </div>
-                  <div key={index} className="movieDetails">
-                    <p id="movie-title">{movies.name}</p>
-                    <p>Director - {movies.director}</p>
-                    <p>Cast - {movies.cast}</p>
-                    <p>IMDB - {movies.rating}</p>
-                    <p>Year - {movies.year}</p>
-                    <p>{movies.description}</p>
-                    <a id="btn" href={movies.youtubeLink} target="_blank" rel="noopener noreferrer">Watch Trailer!</a>
+            movieList[genre].map((movies, index) => {
+              return (
+                <div className="movies-card">
+                  <div key={index} className="moviesCard-Content">
+                    <div className="poster">
+                      <img src={movies.image} alt="poster" />
+                    </div>
+                    <div key={index} className="movieDetails">
+                      <p id="movie-title">{movies.name}</p>
+                      <p>Director - {movies.director}</p>
+                      <p>Cast - {movies.cast}</p>
+                      <p>IMDB - {movies.rating}</p>
+                      <p>Year - {movies.year}</p>
+                      <p>{movies.description}</p>
+                      <a id="btn" href={movies.youtubeLink} target="_blank" rel="noopener noreferrer">Watch Trailer!</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        }
+              );
+            })
+          }
 
-      </div>
-
-
-      <div className="conatiner mainConti">
-      </div>
-
-
-      <footer>
-        <div className="container footerConti">
-          <div className="copyright">
-            <h2 className="copyrightText">
-              Movies And Series Recommendation App
-            </h2>
-            <p id="cp" className="copyrightText">Copyright &copy; 2021</p>
-          </div>
-
-          <div className="socialMedia">
-            <a
-              href="https://github.com/singhsduos/Movies-Or-Series-Reccomendation"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-github fa-2x"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/neelesh-singh-b58a6b152/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-linkedin fa-2x"></i>
-            </a>
-            <a href="https://twitter.com/singhs_duos"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter fa-2x"></i>
-            </a>
-          </div>
         </div>
-      </footer>
 
+
+        <div className="conatiner mainConti">
+        </div>
+
+
+        <footer>
+          <div className="container footerConti">
+            <div className="copyright">
+              <h2 className="copyrightText">
+                Movies And Series Recommendation App
+              </h2>
+              <p id="cp" className="copyrightText">Copyright &copy; 2021</p>
+            </div>
+
+            <div className="socialMedia">
+              <a
+                href="https://github.com/singhsduos/Movies-Or-Series-Reccomendation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-github fa-2x"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/neelesh-singh-b58a6b152/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-linkedin fa-2x"></i>
+              </a>
+              <a href="https://twitter.com/singhs_duos"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-twitter fa-2x"></i>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
