@@ -332,11 +332,6 @@ i {
 /* media-query-760px */
 
 @media screen and (max-width: 760px) {
-   canvas.tsparticles-canvas-el {
-        max-width: 100%;
-        max-height: fit-content;
-        height: 205rem !important;
-      }
     
   .container {
     max-width: fit-content;
