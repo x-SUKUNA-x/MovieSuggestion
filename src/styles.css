@@ -328,10 +328,23 @@ i {
 |______________________________________________|
 
 */
+@media screen and (min-width: 761px) {
+canvas.tsparticles-canvas-el {
+      max-width: 100%;
+      max-height: fit-content;
+      height: 110rem !important;
+    }
+}
 
 /* media-query-760px */
 
 @media screen and (max-width: 760px) {
+  canvas.tsparticles-canvas-el {
+      max-width: 100%;
+      max-height: fit-content;
+      height: 205rem !important;
+      visibility: hidden;
+    }
     
   .container {
     max-width: fit-content;

@@ -12,6 +12,10 @@ const particlesConfig = {
         },
         shape: {
             type: "circle",
+            "stroke": {
+                "width": 0,
+                "color": "#000000"
+            },
             polygon: {
                 nb_sides: 5
             },
@@ -47,7 +51,7 @@ const particlesConfig = {
             distance: 150,
             color: "#edf6f9",
             opacity: 0.4,
-            width: 2
+            width: 1
         },
         move: {
             enable: true,
@@ -78,7 +82,7 @@ const particlesConfig = {
         },
         modes: {
             grab: {
-                distance: 800,
+                distance: 400,
                 line_linked: {
                     opacity: 1
                 }
@@ -91,8 +95,8 @@ const particlesConfig = {
                 speed: 3
             },
             repulse: {
-                distance: 100,
-                duration: 0
+                distance: 200,
+               
             },
             push: {
                 particles_nb: 4
@@ -102,7 +106,8 @@ const particlesConfig = {
             }
         }
     },
-    retina_detect: true
+    retina_detect: true,
+    
 };
 
 export default particlesConfig
