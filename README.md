@@ -17,9 +17,9 @@ This is a Movies-Reccomendation app built using ReactJS that can tell the list o
 [![REACTJS](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white)](https://reactjs.org/)
 [![web](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=Netlify&logoColor=white)](https://movie-reccomendation-app.netlify.app/)
 
+![Movie-Recommendation-App-1](https://user-images.githubusercontent.com/32032008/132455650-075efda0-974e-44ad-a29b-2e47cd52bc4c.png)
+![Movie-Recommendation-App-2](https://user-images.githubusercontent.com/32032008/132455670-ad80b426-fdb4-4237-90db-f5a1a603a11c.png)
 
-![Movie-Recommendation-App-1](https://user-images.githubusercontent.com/32032008/132235466-88ef2067-fae1-4c07-ba4c-a703de3ca2af.png)
-![Movie-Recommendation-App-2](https://user-images.githubusercontent.com/32032008/132237960-001b9d79-c91c-4dd9-a60e-4a38ca6e3c8e.png)
 
 
 
