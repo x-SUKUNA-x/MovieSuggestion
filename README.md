@@ -8,6 +8,7 @@ This is a Movies-Reccomendation app built using ReactJS that can tell the list o
 1. Working with ReactJS
 2. JSX
 3. CSS-3 Flip Card Animation
+4. Extras: Particles.js library added(Only for desktop mode) && developer mode disabled.
 
 
 ## Tech Stack
