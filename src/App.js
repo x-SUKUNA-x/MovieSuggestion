@@ -209,6 +209,17 @@ var movieList = {
       image: "https://m.media-amazon.com/images/I/61HqHOUj08L._AC_SL1500_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=iUZ3Yxok6N8",
     },
+    
+    {
+      name: "Go Goa Gone",
+      director: "Krishna D.K, Raj Nidimoru",
+      cast: "Saif Ali Khan, Kunal Khemu, Vir Das",
+      rating: "6.7/10",
+      year: "2013",
+      description: "A group of friends, just looking to have a good time in a rave party on a remote island in Goa, find out that the island is infested with Zombies.",
+      image: "https://m.media-amazon.com/images/M/MV5BMjAzNzI5MTQxOV5BMl5BanBnXkFtZTcwNTQ0MDE1OQ@@._V1_.jpg",
+      youtubeLink: "https://www.youtube.com/watch?v=4V5zGNVRmaE",
+    },
   ],
 
   Fiction: [
@@ -267,6 +278,17 @@ var movieList = {
       description: "Two astronauts work together to survive after an accident leaves them stranded in space.",
       image: "https://m.media-amazon.com/images/I/81DNIBr-eSL._AC_SL1500_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=OiTiKOy59o4",
+    },
+    
+    {
+      name: "Passengers",
+      director: "Morten Tyldum",
+      cast: "Jennifer Lawrence, Chris Pratt",
+      rating: "7.0/10",
+      year: "2016",
+      description: "A malfunction in a sleeping pod on a spacecraft traveling to a distant colony planet wakes one passenger 90 years early.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRugHHUIBOj_uz5XXRUSlRWeof81PdfonkWPkqxcJs8NYFNfTMI",
+      youtubeLink: "https://www.youtube.com/watch?v=7BWWWQzTpNU",
     }
   ],
 
