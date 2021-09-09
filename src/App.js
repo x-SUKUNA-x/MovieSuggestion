@@ -216,7 +216,7 @@ var movieList = {
       cast: "Saif Ali Khan, Kunal Khemu, Vir Das",
       rating: "6.7/10",
       year: "2013",
-      description: "A group of friends, just looking to have a good time in a rave party on a remote island in Goa, find out that the island is infested with Zombies.",
+      description: "A group of friends, just go Goa in remote island for fun and rave party, find out that the island is infested with Zombies.",
       image: "https://m.media-amazon.com/images/M/MV5BMjAzNzI5MTQxOV5BMl5BanBnXkFtZTcwNTQ0MDE1OQ@@._V1_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=4V5zGNVRmaE",
     },
