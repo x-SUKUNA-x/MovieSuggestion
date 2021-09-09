@@ -28,8 +28,7 @@ This is a Movies-Reccomendation app built using ReactJS that can tell the list o
 ## Demo-video
 
 
-https://user-images.githubusercontent.com/32032008/132237610-060c208b-cc04-4d90-8620-bdfc76d57578.mp4
-
+https://user-images.githubusercontent.com/32032008/132743411-79df5e55-20a9-43bf-9c13-22839df5355f.mp4
 
 
 
