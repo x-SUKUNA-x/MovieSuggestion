@@ -43,6 +43,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
+    var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
+    var movieDiv = document.querySelector(".movieBody");
+    var movieDivHeight = movieDiv.clientHeight;
+    canvasDiv..setAttribute("style",`height:${movieDivHeight}px`);
+    
     // You should block the user to perform below actions,
     //  Right Click
     //  F12
