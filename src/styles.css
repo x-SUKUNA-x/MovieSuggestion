@@ -332,7 +332,6 @@ i {
 canvas.tsparticles-canvas-el {
       max-width: 100%;
       max-height: fit-content;
-      height: 110rem !important;
     }
 }
 
