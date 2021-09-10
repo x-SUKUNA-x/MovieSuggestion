@@ -1,8 +1,7 @@
 import { useState } from "react";
 import ParticleBackground from "./ParticleBackground";
 import "./styles.css";
-var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
-var movieDiv = document.querySelector(".movieBody");
+
 
 
 // all movies list
@@ -369,6 +368,17 @@ var movieList = {
 
 
 function App() {
+  
+  function canvHeight(){
+     var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
+     var movieDiv = document.querySelector(".movieBody");
+     var movieDivHeight = movieDiv.clientHeight;
+     console.log(movieDivHeight);
+     var h = canvasDiv.setAttribute("style",`height:${movieDivHeight}px! important`);
+  }
+  
+  canvHeight();
+  
   // usestate
   const [genre, genreData] = useState("Thriller");
 
@@ -477,8 +487,7 @@ function App() {
       </div>
     </div>
   );
- var movieDivHeight = movieDiv.clientHeight;
-  canvasDiv.setAttribute("style",`height:${movieDivHeight}px! important`);
+
 }
 
 export default App;
