@@ -368,17 +368,6 @@ var movieList = {
 
 
 function App() {
-  
-  function canvHeight(){
-     var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
-     var movieDiv = document.querySelector(".movieBody");
-     var movieDivHeight = movieDiv.clientHeight;
-     console.log(movieDivHeight);
-     var h = canvasDiv.setAttribute("style",`height:${movieDivHeight}px! important`);
-  }
-  
-  canvHeight();
-  
   // usestate
   const [genre, genreData] = useState("Thriller");
 
@@ -389,11 +378,21 @@ function App() {
   }
 
 
+  // var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
+  // var movieDiv = document.getElementById("movieBodyHeight");
+  // var movieDivHeight = movieDiv.getBoundingClientRect().height
+  // console.log(movieDivHeight);
+  // canvasDiv.setAttribute("style", `height:${movieDivHeight}px`);
+
+
+  
   return (
 
     <div className="App">
       <ParticleBackground />
-      <div className="movieBody">
+      <div className="movieBody" >
+        
+        
         <div className="header">
           <div className="container">
             <div className="space">
@@ -487,7 +486,6 @@ function App() {
       </div>
     </div>
   );
-
 }
 
 export default App;
