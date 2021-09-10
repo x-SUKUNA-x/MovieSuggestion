@@ -1,6 +1,8 @@
 import { useState } from "react";
 import ParticleBackground from "./ParticleBackground";
 import "./styles.css";
+var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
+var movieDiv = document.querySelector(".movieBody");
 
 
 // all movies list
@@ -475,6 +477,8 @@ function App() {
       </div>
     </div>
   );
+ var movieDivHeight = movieDiv.clientHeight;
+  canvasDiv.setAttribute("style",`height:${movieDivHeight}px! important`);
 }
 
 export default App;
