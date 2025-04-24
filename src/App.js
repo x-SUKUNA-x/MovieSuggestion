@@ -1,12 +1,123 @@
-import { useState } from "react";
-import ParticleBackground from "./ParticleBackground";
+import { useState, useEffect, useRef } from "react";
+import GridMotion from "./GridMotion";
+import TextCursor from "./TextCursor";
+import InfiniteMenu from "./InfiniteMenu";
 import "./styles.css";
 
+const Title = () => {
+  return (
+    <div className="page-title">
+      <h1>Movie & Series Recommendation</h1>
+      <div className="cursor-container">
+        <TextCursor
+          text="Movie & Series Recommendation"
+          delay={0.01}
+          spacing={80}
+          followMouseDirection={true}
+          randomFloat={true}
+          exitDuration={0.3}
+          removalInterval={20}
+          maxPoints={10}
+        />
+      </div>
+    </div>
+  );
+};
 
+const ImageWithFallback = ({ src, alt, ...props }) => {
+  const [imgSrc, setImgSrc] = useState(src);
+  const [error, setError] = useState(false);
 
-// all movies list
-var movieList = {
+  useEffect(() => {
+    setImgSrc(src);
+    setError(false);
+  }, [src]);
 
+  const handleError = () => {
+    if (!error) {
+      setError(true);
+      // Try alternative image URLs if the main one fails
+      if (src.includes("amazon")) {
+        const alternativeUrl = src.replace("amazon", "imdb");
+        setImgSrc(alternativeUrl);
+      } else {
+        setImgSrc("https://via.placeholder.com/300x400?text=Image+Not+Available");
+      }
+    }
+  };
+
+  return (
+    <img
+      src={imgSrc}
+      alt={alt}
+      onError={handleError}
+      loading="lazy"
+      {...props}
+    />
+  );
+};
+
+const items = [
+  'Money Heist',
+  'https://www.worthcrete.com/wp-content/uploads/2023/01/Money-Heist-Online-HINDI-WorthCrete.webp',
+  'Wednesday',
+  'https://images.justwatch.com/poster/301078631/s718/wednesday.jpg',
+  'Stranger Things',
+  'https://occ-0-8407-2433.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABaIb3dTroTNbkOlr3IDYEVilVq7ZGj2zXEv2JCaq20O58tRRcdvBfKr5lXYvHoKxDVUpChCXdQfz0_t9w4-A-JiaXZgelZjiOruh.jpg?r=1f9',
+  'Game of Thrones',
+  'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/best-fan-favorite-game-of-thrones-characters-ranked.jpg',
+  'Mirzapur',
+  'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnUs0fGX7ZYGytz947j19mBLMwaZMv_jCyZkXWwHMXt_GKRAhaclB0lmC5i_17U17x-G9Vqv3s-VkoXT5SvAuwZE-edTDZ7z3HTp-x6eHCwZ4N7UaPR_MWrO_yu76gbRSgODmfj_4XJU6C/s1200/mirzapur-2-1200-4.jpg',
+  'Loki',
+  'https://images.thedirect.com/media/article_full/loki-season-2-mcu.jpg',
+  'Stranger Things',
+  'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/09/stranger-things-every-seasons.jpg',
+  'Breaking Bad',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AUQ1ap545wJq1Op_9GPLFAV15boesLoyZA&s',
+  'Peaky Blinders',
+  'https://m.media-amazon.com/images/M/MV5BMThlOWE3MWEtZjM4Ny00M2FiLTkyMmYtZGY3ZTcyMzM5YmNlXkEyXkFqcGdeQWpnYW1i._V1_.jpg',
+  'The Witcher',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4adzXOad5ur9iy1ErLBFMDOnqx_lsAV4CzA&s',
+  'The Last of Us',
+  'https://resizing.flixster.com/LKF-jjRupKKfC9SRHVKBB0aFX7c=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p20410134_b_v13_aa.jpg',
+  'The Mandalorian',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyPW8_p-xM7lNBd5wkeh-10cb37TnupDLRmQ1eLnXXAQqmFeAUHgpkg__fHiyfjfxTcI&usqp=CAU',
+  'Dark',
+  'https://www.irosf.com/wp-content/uploads/2020/12/dark-1.jpg',
+  'Harry Potter',
+  'https://irs.www.warnerbros.com/keyart-jpeg/movies/media/browser/harry_potter_8film_2000x3000.jpg',
+  'Money Heist',
+  'https://www.worthcrete.com/wp-content/uploads/2023/01/Money-Heist-Online-HINDI-WorthCrete.webp',
+  'Wednesday',
+  'https://images.justwatch.com/poster/301078631/s718/wednesday.jpg',
+  'Stranger Things',
+  'https://occ-0-8407-2433.1.nflxso.net/dnm/api/v6/Z-WHgqd_TeJxSuha8aZ5WpyLcX8/AAAABaIb3dTroTNbkOlr3IDYEVilVq7ZGj2zXEv2JCaq20O58tRRcdvBfKr5lXYvHoKxDVUpChCXdQfz0_t9w4-A-JiaXZgelZjiOruh.jpg?r=1f9',
+  'Game of Thrones',
+  'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/02/best-fan-favorite-game-of-thrones-characters-ranked.jpg',
+  'Mirzapur',
+  'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjnUs0fGX7ZYGytz947j19mBLMwaZMv_jCyZkXWwHMXt_GKRAhaclB0lmC5i_17U17x-G9Vqv3s-VkoXT5SvAuwZE-edTDZ7z3HTp-x6eHCwZ4N7UaPR_MWrO_yu76gbRSgODmfj_4XJU6C/s1200/mirzapur-2-1200-4.jpg',
+  'Loki',
+  'https://images.thedirect.com/media/article_full/loki-season-2-mcu.jpg',
+  'Stranger Things',
+  'https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/09/stranger-things-every-seasons.jpg',
+  'Breaking Bad',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AUQ1ap545wJq1Op_9GPLFAV15boesLoyZA&s',
+  'Peaky Blinders',
+  'https://m.media-amazon.com/images/M/MV5BMThlOWE3MWEtZjM4Ny00M2FiLTkyMmYtZGY3ZTcyMzM5YmNlXkEyXkFqcGdeQWpnYW1i._V1_.jpg',
+  'The Witcher',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4adzXOad5ur9iy1ErLBFMDOnqx_lsAV4CzA&s',
+  'The Last of Us',
+  'https://resizing.flixster.com/LKF-jjRupKKfC9SRHVKBB0aFX7c=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p20410134_b_v13_aa.jpg',
+  'The Mandalorian',
+  'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdyPW8_p-xM7lNBd5wkeh-10cb37TnupDLRmQ1eLnXXAQqmFeAUHgpkg__fHiyfjfxTcI&usqp=CAU',
+  'https://www.irosf.com/wp-content/uploads/2020/12/dark-1.jpg',
+  'https://www.irosf.com/wp-content/uploads/2020/12/dark-1.jpg',
+  'https://www.irosf.com/wp-content/uploads/2020/12/dark-1.jpg',
+  'https://irs.www.warnerbros.com/keyart-jpeg/movies/media/browser/harry_potter_8film_2000x3000.jpg',
+];
+
+// Movie data type definition
+const movieList = {
   Thriller: [
     {
       name: "Badla",
@@ -288,7 +399,7 @@ var movieList = {
       rating: "7.0/10",
       year: "2016",
       description: "A malfunction in a sleeping pod on a spacecraft traveling to a distant colony planet wakes one passenger 90 years early.",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRugHHUIBOj_uz5XXRUSlRWeof81PdfonkWPkqxcJs8NYFNfTMI",
+      image: "https://m.media-amazon.com/images/M/MV5BMTk4MjU3MDIzOF5BMl5BanBnXkFtZTgwMjM2MzY2MDI@._V1_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=7BWWWQzTpNU",
     }
   ],
@@ -301,7 +412,7 @@ var movieList = {
       rating: "7.6/10",
       year: "2014",
       description: "After being struck by lightning, Barry Allen become the next Flash with super speed power, fighting crime in Central City.",
-      image: "https://m.media-amazon.com/images/M/MV5BMDIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
+      image: "https://m.media-amazon.com/images/M/MV5BODIzNzYwNTctZWY4Mi00YjQ2LWI5YWYtMzdmNDgwMGI4Yzk1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
       youtubeLink: "https://www.youtube.com/watch?v=Yj0l7iGKh8g",
     },
 
@@ -364,126 +475,77 @@ var movieList = {
 
 };
 
-
-
-
 function App() {
-  // usestate
-  const [genre, genreData] = useState("Thriller");
+  const [selectedGenre, setSelectedGenre] = useState(null);
+  const [movies, setMovies] = useState([]);
+  const [currentPage, setCurrentPage] = useState('home');
+  const movieListRef = useRef(null);
 
-  // onclick event
-  var genreList = Object.keys(movieList);
-  function listGenreHandler(genre) {
-    genreData(genre);
-  }
+  const listGenreHandler = (genre) => {
+    setSelectedGenre(genre);
+    setMovies(movieList[genre] || []);
+    setCurrentPage('genre');
+  };
 
+  const goBack = () => {
+    setCurrentPage('home');
+    setSelectedGenre(null);
+    setMovies([]);
+  };
 
-  // var canvasDiv = document.querySelector("canvas.tsparticles-canvas-el");
-  // var movieDiv = document.getElementById("movieBodyHeight");
-  // var movieDivHeight = movieDiv.getBoundingClientRect().height
-  // console.log(movieDivHeight);
-  // canvasDiv.setAttribute("style", `height:${movieDivHeight}px`);
+  useEffect(() => {
+    if (selectedGenre) {
+      setMovies(movieList[selectedGenre] || []);
+    }
+  }, [selectedGenre]);
 
-
-  
   return (
-
     <div className="App">
-      <ParticleBackground />
-      <div className="movieBody" >
-        
-        
-        <div className="header">
+      {currentPage === 'home' ? (
+        <>
+          <div className="top-section">
+            <Title />
+            <InfiniteMenu 
+              items={Object.keys(movieList)} 
+              onSelect={listGenreHandler}
+            />
+          </div>
+          <GridMotion items={items} gradientColor="black" />
+        </>
+      ) : (
+        <div className="genre-page">
+          <div className="top-section">
+            <button className="back-button" onClick={goBack}>
+              ← Back to Home
+            </button>
+            <h2 className="genre-title">{selectedGenre}</h2>
+          </div>
           <div className="container">
-            <div className="space">
-              <div className="space1"></div>
-              <div className="space2"></div>
-            </div>
-
-            <h1 id="heading"><span role="img" aria-label="movie camera emoji">
-              🎥
-            </span> Movies And Series Recommendation App
-            </h1>
-          </div>
-        </div>
-
-
-        <div className="container subHead-Conti">
-          <div className="subHeadings">
-            {
-              genreList.map((genre, index) => {
-                return <p key={index} onClick={() => listGenreHandler(genre)}>{genre}</p>
-              })
-
-            }
-          </div>
-        </div>
-
-        <div className="conatiner movieList-conti">
-          {
-            movieList[genre].map((movies, index) => {
-              return (
-                <div className="movies-card">
-                  <div key={index} className="moviesCard-Content">
-                    <div className="poster">
-                      <img src={movies.image} alt="poster" />
-                    </div>
-                    <div key={index} className="movieDetails">
-                      <p id="movie-title">{movies.name}</p>
-                      <p>Director - {movies.director}</p>
-                      <p>Cast - {movies.cast}</p>
-                      <p>IMDB - {movies.rating}</p>
-                      <p>Year - {movies.year}</p>
-                      <p>{movies.description}</p>
-                      <a id="btn" href={movies.youtubeLink} target="_blank" rel="noopener noreferrer">Watch Trailer!</a>
-                    </div>
+            <div className="movie-list" ref={movieListRef}>
+              {movies.map((movie, index) => (
+                <div key={index} className="movie-card">
+                  <ImageWithFallback
+                    src={movie.image}
+                    alt={movie.name}
+                    className="movie-poster"
+                  />
+                  <div className="movie-info">
+                    <h2>{movie.name}</h2>
+                    <p><strong>Director:</strong> {movie.director}</p>
+                    <p><strong>Cast:</strong> {movie.cast}</p>
+                    <p><strong>Rating:</strong> {movie.rating}</p>
+                    <p><strong>Year:</strong> {movie.year}</p>
+                    <p><strong>Description:</strong> {movie.description}</p>
+                    <a href={movie.youtubeLink} target="_blank" rel="noopener noreferrer" className="watch-button">
+                      Watch Trailer
+                    </a>
                   </div>
                 </div>
-              );
-            })
-          }
-
-        </div>
-
-
-        <div className="conatiner mainConti">
-        </div>
-
-
-        <footer>
-          <div className="container footerConti">
-            <div className="copyright">
-              <h2 className="copyrightText">
-                Movies And Series Recommendation App
-              </h2>
-              <p id="cp" className="copyrightText">Copyright &copy; 2021</p>
-            </div>
-
-            <div className="socialMedia">
-              <a
-                href="https://github.com/singhsduos/Movies-Or-Series-Reccomendation"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-github fa-2x"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/neelesh-singh-b58a6b152/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-linkedin fa-2x"></i>
-              </a>
-              <a href="https://twitter.com/singhs_duos"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-twitter fa-2x"></i>
-              </a>
+              ))}
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      )}
     </div>
   );
 }

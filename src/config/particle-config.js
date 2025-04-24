@@ -1,47 +1,34 @@
 const particlesConfig = {
     particles: {
         number: {
-            value: 160,
+            value: 50,
             density: {
-                enable: false,
-                value_area: 100
+                enable: true,
+                value_area: 800
             }
         },
         color: {
-            value: "#edf6f9"
+            value: "#ffffff"
         },
         shape: {
-            type: "circle",
-            "stroke": {
-                "width": 0,
-                "color": "#000000"
-            },
-            polygon: {
-                nb_sides: 5
-            },
-            image: {
-                enable: false,
-                src: "img/github.svg",
-                width: 100,
-                height: 100
-            }
+            type: "circle"
         },
         opacity: {
-            value: 0.5,
-            random: false,
+            value: 0.3,
+            random: true,
             anim: {
-                enable: false,
+                enable: true,
                 speed: 1,
                 opacity_min: 0.1,
                 sync: false
             }
         },
         size: {
-            value: 5,
+            value: 2,
             random: true,
             anim: {
-                enable: false,
-                speed: 40,
+                enable: true,
+                speed: 2,
                 size_min: 0.1,
                 sync: false
             }
@@ -49,19 +36,20 @@ const particlesConfig = {
         line_linked: {
             enable: true,
             distance: 150,
-            color: "#edf6f9",
-            opacity: 0.4,
+            color: "#ffffff",
+            opacity: 0.2,
             width: 1
         },
         move: {
             enable: true,
-            speed: 6,
+            speed: 1,
             direction: "none",
-            random: false,
+            random: true,
             straight: false,
             out_mode: "out",
+            bounce: false,
             attract: {
-                enable: false,
+                enable: true,
                 rotateX: 600,
                 rotateY: 1200
             }
@@ -72,7 +60,7 @@ const particlesConfig = {
         events: {
             onhover: {
                 enable: true,
-                mode: "repulse"
+                mode: "grab"
             },
             onclick: {
                 enable: true,
@@ -82,27 +70,13 @@ const particlesConfig = {
         },
         modes: {
             grab: {
-                distance: 400,
+                distance: 140,
                 line_linked: {
-                    opacity: 1
+                    opacity: 0.5
                 }
-            },
-            bubble: {
-                distance: 800,
-                size: 80,
-                duration: 2,
-                opacity: 0.8,
-                speed: 3
-            },
-            repulse: {
-                distance: 200,
-               
             },
             push: {
                 particles_nb: 4
-            },
-            remove: {
-                particles_nb: 2
             }
         }
     },
